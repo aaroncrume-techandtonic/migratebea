@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/klamath-app/',
+  base: '/klamath-app-medicine-wheel/',
 })
