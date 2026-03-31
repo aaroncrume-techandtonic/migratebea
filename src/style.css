@@ -66,6 +66,7 @@ h2 {
 }
 
 .hero,
+.build-feature,
 .controls,
 .quiz,
 .stats,
@@ -164,6 +165,97 @@ h2 {
   padding: 1.12rem;
   border-top: 3px solid var(--east);
   position: relative;
+}
+
+.build-feature {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-left: 5px solid var(--accent);
+  display: grid;
+  grid-template-columns: auto minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: center;
+  background:
+    linear-gradient(0deg, rgba(246, 243, 236, 0.55), rgba(246, 243, 236, 0.55)),
+    color-mix(in srgb, var(--surface) 94%, transparent);
+}
+
+.build-feature-wheel {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  border: 3px solid rgba(35, 30, 24, 0.16);
+  background: conic-gradient(
+    from -45deg,
+    var(--east) 0deg 90deg,
+    var(--south) 90deg 180deg,
+    var(--west) 180deg 270deg,
+    var(--north) 270deg 360deg
+  );
+  position: relative;
+}
+
+.build-feature-wheel::before,
+.build-feature-wheel::after {
+  content: '';
+  position: absolute;
+  background: rgba(35, 30, 24, 0.28);
+}
+
+.build-feature-wheel::before {
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  transform: translateY(-50%);
+}
+
+.build-feature-wheel::after {
+  left: 50%;
+  top: 10%;
+  bottom: 10%;
+  width: 2px;
+  transform: translateX(-50%);
+}
+
+.build-feature-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.build-feature-copy h2 {
+  margin-top: 0.24rem;
+  font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+  background: linear-gradient(100deg, var(--east), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.build-feature-copy p:last-child {
+  margin-top: 0.34rem;
+  color: var(--text-muted);
+  font-size: 0.94rem;
+}
+
+.build-feature-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.build-feature-list li {
+  border: 1px solid #d8cbb2;
+  border-radius: 12px;
+  background: #fff9ef;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.84rem;
+  color: var(--text-muted);
 }
 
 .controls::after {
@@ -687,6 +779,16 @@ h2 {
 }
 
 @media (max-width: 900px) {
+  .build-feature {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .build-feature-wheel {
+    width: 78px;
+    height: 78px;
+  }
+
   .term-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

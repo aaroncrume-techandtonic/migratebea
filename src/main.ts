@@ -392,6 +392,23 @@ const render = (): void => {
         </p>
       </header>
 
+      <section class="build-feature" aria-label="Build highlight">
+        <div class="build-feature-wheel" aria-hidden="true"></div>
+        <div class="build-feature-copy">
+          <p class="build-feature-kicker">Featured Build</p>
+          <h2>Medicine Wheel Edition</h2>
+          <p>
+            This release introduces a ceremonial visual direction with four-direction color cues,
+            directional motif accents, and stronger readability across quiz and vocabulary cards.
+          </p>
+        </div>
+        <ul class="build-feature-list" aria-label="Feature highlights">
+          <li>Four-direction color system across controls and category chips</li>
+          <li>Hero, quiz, and group motifs inspired by medicine wheel geometry</li>
+          <li>Refined matte surfaces for cleaner focus during study and practice</li>
+        </ul>
+      </section>
+
       <section class="controls" aria-label="Vocabulary controls">
         <label class="search-label" for="search-input">Search</label>
         <div class="search-row">
