@@ -1,0 +1,296 @@
+:root {
+  --bg-1: #f4f3ef;
+  --bg-2: #e5e9eb;
+  --ink: #1f2428;
+  --muted: #4f5c66;
+  --surface: rgba(255, 255, 255, 0.8);
+  --surface-strong: #ffffff;
+  --line: rgba(31, 36, 40, 0.13);
+  --accent: #0d7665;
+  --accent-2: #d76b2f;
+  --shadow: 0 20px 45px rgba(23, 27, 31, 0.13);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  color: var(--ink);
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: linear-gradient(155deg, var(--bg-1) 0%, var(--bg-2) 100%);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: transform 200ms ease, box-shadow 220ms ease, color 200ms ease;
+}
+
+.site-bg {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 8% 12%, rgba(13, 118, 101, 0.15), transparent 32%),
+    radial-gradient(circle at 92% 18%, rgba(215, 107, 47, 0.13), transparent 28%),
+    linear-gradient(rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.32));
+  z-index: -1;
+  pointer-events: none;
+}
+
+.portfolio-shell {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1.1rem 0 2rem;
+  position: relative;
+}
+
+.hero,
+.section,
+.role-card,
+.project-card {
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--surface);
+  backdrop-filter: blur(3px);
+  box-shadow: var(--shadow);
+  opacity: 0;
+  transform: translateY(16px);
+  animation: rise-in 600ms ease forwards;
+}
+
+.hero {
+  margin-top: 0;
+  animation-delay: 0ms;
+}
+
+.section:nth-of-type(1) {
+  margin-top: 0.9rem;
+  animation-delay: 120ms;
+}
+
+.section:nth-of-type(2) {
+  margin-top: 0.9rem;
+  animation-delay: 200ms;
+}
+
+.section:nth-of-type(3) {
+  margin-top: 0.9rem;
+  animation-delay: 280ms;
+}
+
+@keyframes rise-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero {
+  padding: clamp(1.3rem, 3.4vw, 2rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  right: -70px;
+  top: -60px;
+  border-radius: 50%;
+  background: conic-gradient(from 90deg, rgba(13, 118, 101, 0.15), rgba(215, 107, 47, 0.2), rgba(13, 118, 101, 0.15));
+  pointer-events: none;
+}
+
+.kicker {
+  display: inline-block;
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.hero h1,
+.section h2,
+.role-card h3,
+.project-card h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  line-height: 1.08;
+}
+
+.hero h1 {
+  position: relative;
+  margin-top: 0.55rem;
+  max-width: 18ch;
+  font-size: clamp(2rem, 5vw, 3.35rem);
+}
+
+.intro {
+  margin-top: 0.7rem;
+  max-width: 70ch;
+  color: var(--muted);
+}
+
+.hero-meta {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.hero-meta a {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.hero-meta a:hover {
+  transform: translateY(-1px);
+}
+
+.back-link {
+  margin-top: 0.85rem;
+  display: inline-block;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.48rem 0.8rem;
+  font-weight: 700;
+  font-size: 0.84rem;
+}
+
+.back-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.section {
+  padding: clamp(1rem, 2.7vw, 1.55rem);
+}
+
+.section h2 {
+  margin-top: 0.4rem;
+  font-size: clamp(1.45rem, 2.7vw, 2.2rem);
+}
+
+.highlights {
+  margin-top: 0.8rem;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.4rem;
+  color: var(--muted);
+}
+
+.highlights li {
+  list-style: none;
+}
+
+.role-grid,
+.project-grid {
+  margin-top: 0.95rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.role-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.role-card,
+.project-card {
+  padding: 0.9rem;
+}
+
+.role-years,
+.project-kind,
+.role-meta {
+  color: var(--muted);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.role-card h3,
+.project-card h3 {
+  margin-top: 0.28rem;
+  font-size: 1.25rem;
+}
+
+.role-summary,
+.project-card > p:nth-of-type(1) {
+  margin-top: 0.48rem;
+  color: var(--muted);
+}
+
+.role-card ul {
+  margin: 0.62rem 0 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.3rem;
+  color: var(--muted);
+}
+
+.role-card ul li {
+  font-size: 0.92rem;
+}
+
+.project-card a {
+  margin-top: 0.6rem;
+  display: inline-block;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.45rem 0.78rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  background: #f7f9fa;
+}
+
+.project-card a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .role-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .portfolio-shell {
+    width: min(1100px, calc(100% - 1rem));
+    padding-bottom: 1rem;
+  }
+
+  .role-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
