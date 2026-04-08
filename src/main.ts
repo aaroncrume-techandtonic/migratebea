@@ -62,13 +62,7 @@ const easyAccessLinks: LinkCard[] = [
     label: 'Language Learning',
   },
   {
-    title: 'About the Builder',
-    detail: 'Follow a concise profile of experience, project highlights, and leadership background to understand who is behind the work.',
-    href: 'compound-portfolio.html',
-    label: 'Background',
-  },
-  {
-    title: 'Oracle Neumero Experience',
+    title: 'Oracle of the Wheel',
     detail: 'Step into the numerology pathway if you want another symbolic tool for reflection and interpretation.',
     href: 'https://aaroncrume-techandtonic.github.io/OracleNeumero/',
     label: 'Companion Tool',
@@ -87,6 +81,44 @@ const easyAccessLinks: LinkCard[] = [
   },
 ]
 
+const creatorsPortfolio: LinkCard = {
+  title: 'Creators Portfolio',
+  detail: 'Get the full background in one place: experience, project constellation, and the builder profile behind the work you explored above.',
+  href: 'compound-portfolio.html',
+  label: 'Featured Profile',
+}
+
+const appDirectoryLinks: Array<Pick<LinkCard, 'title' | 'href'>> = [
+  {
+    title: 'Indigenous Learning Library',
+    href: 'https://aaroncrume-techandtonic.github.io/indigenous-pages/',
+  },
+  {
+    title: 'Modoc History Archive',
+    href: 'https://aaroncrume-techandtonic.github.io/Modoc-War/',
+  },
+  {
+    title: 'Klamath Watershed Story Map',
+    href: 'https://aaroncrume-techandtonic.github.io/klamath-watershed/',
+  },
+  {
+    title: 'Omni Cosmos Reading',
+    href: 'https://omni-cosmos.vercel.app',
+  },
+  {
+    title: 'Klamath Language Learning App',
+    href: 'https://aaroncrume-techandtonic.github.io/klamath-app/',
+  },
+  {
+    title: 'Oracle of the Wheel',
+    href: 'https://aaroncrume-techandtonic.github.io/OracleNeumero/',
+  },
+  {
+    title: 'Creators Portfolio',
+    href: 'compound-portfolio.html',
+  },
+]
+
 const renderCards = (items: LinkCard[]): string => {
   return items
     .map((item) => {
@@ -102,11 +134,24 @@ const renderCards = (items: LinkCard[]): string => {
     .join('')
 }
 
+const renderAppDirectoryLinks = (): string => {
+  return appDirectoryLinks
+    .map((item) => `<a href="${item.href}" target="_blank" rel="noreferrer">${item.title}</a>`)
+    .join('')
+}
+
 const year = new Date().getFullYear()
 
 app.innerHTML = `
   <div class="site-bg"></div>
   <div class="site-shell">
+    <section class="app-rail" aria-label="App navigation">
+      <p class="app-rail-label">App Navigation</p>
+      <nav class="app-rail-links">
+        ${renderAppDirectoryLinks()}
+      </nav>
+    </section>
+
     <header class="hero" id="top">
       <p class="eyebrow">Tech & Tonic</p>
       <h1>Start here, then follow a clear path through story, tools, and next steps.</h1>
@@ -122,9 +167,20 @@ app.innerHTML = `
     <nav class="jump-nav" aria-label="Section navigation">
       <a href="#portfolio">Works</a>
       <a href="#find">Paths</a>
+      <a href="#creator">Creator</a>
       <a href="#about">Practice</a>
       <a href="#contact-section">Conversation</a>
     </nav>
+
+    <section class="section section-about" id="about">
+      <div class="section-head">
+        <p class="eyebrow">Story and Practice</p>
+        <h2>You are in a space where cultural storytelling, education, and digital craft are designed to work together.</h2>
+      </div>
+      <p>
+        Every section is arranged to guide you from discovery to action with clearer context, better transitions, and fewer dead ends.
+      </p>
+    </section>
 
     <section class="section" id="portfolio">
       <div class="section-head">
@@ -139,21 +195,26 @@ app.innerHTML = `
     <section class="section" id="find">
       <div class="section-head">
         <p class="eyebrow">Guided Paths</p>
-        <h2>After exploring the featured work, use these direct paths to shop, access free resources, or learn more about the builder.</h2>
+        <h2>After exploring the featured work, use these direct paths to shop, access free resources, and continue your learning journey.</h2>
       </div>
       <div class="card-grid">
         ${renderCards(easyAccessLinks)}
       </div>
     </section>
 
-    <section class="section section-about" id="about">
+    <section class="section" id="creator">
       <div class="section-head">
-        <p class="eyebrow">Story and Practice</p>
-        <h2>You are in a space where cultural storytelling, education, and digital craft are designed to work together.</h2>
+        <p class="eyebrow">Creators Portfolio</p>
+        <h2>When you want the full context, open the complete creator profile in one dedicated space.</h2>
       </div>
-      <p>
-        Every section is arranged to guide you from discovery to action with clearer context, better transitions, and fewer dead ends.
-      </p>
+      <div class="card-grid card-grid-single">
+        <article class="link-card link-card-large">
+          <p class="card-label">${creatorsPortfolio.label}</p>
+          <h3>${creatorsPortfolio.title}</h3>
+          <p>${creatorsPortfolio.detail}</p>
+          <a href="${creatorsPortfolio.href}" target="_blank" rel="noreferrer">Open Link</a>
+        </article>
+      </div>
     </section>
 
     <section class="section section-contact" id="contact-section">

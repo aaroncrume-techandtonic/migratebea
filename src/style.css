@@ -57,6 +57,49 @@ a {
   padding: 1.1rem 0 2rem;
 }
 
+.app-rail {
+  margin-bottom: 0.9rem;
+  padding: 0.95rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--surface);
+  backdrop-filter: blur(3px);
+  box-shadow: var(--shadow);
+}
+
+.app-rail-label {
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.app-rail-links {
+  margin-top: 0.55rem;
+  display: grid;
+  gap: 0.42rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.app-rail-links a {
+  display: block;
+  padding: 0.42rem 0.58rem;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--surface-strong);
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: transform 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.app-rail-links a:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 .hero,
 .jump-nav,
 .section,
@@ -222,6 +265,10 @@ a {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.card-grid-single {
+  grid-template-columns: 1fr;
+}
+
 .link-card {
   border: 1px solid var(--line);
   border-radius: 18px;
@@ -229,6 +276,11 @@ a {
   padding: 0.9rem;
   display: grid;
   gap: 0.5rem;
+}
+
+.link-card-large {
+  padding: 1.2rem;
+  gap: 0.7rem;
 }
 
 .card-label {
@@ -241,6 +293,10 @@ a {
 
 .link-card h3 {
   font-size: 1.3rem;
+}
+
+.link-card-large h3 {
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
 }
 
 .link-card p {
@@ -434,6 +490,10 @@ a {
 }
 
 @media (max-width: 900px) {
+  .app-rail-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .card-grid,
   .card-grid-portfolio {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -444,6 +504,14 @@ a {
   .site-shell {
     width: min(1100px, calc(100% - 1rem));
     padding-bottom: 1rem;
+  }
+
+  .app-rail {
+    margin-bottom: 0.8rem;
+  }
+
+  .app-rail-links {
+    grid-template-columns: 1fr;
   }
 
   .card-grid,
