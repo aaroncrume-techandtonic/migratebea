@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg-1: #f4f3ef;
-  --bg-2: #e5e9eb;
-  --ink: #1f2428;
-  --muted: #4f5c66;
-  --surface: rgba(255, 255, 255, 0.8);
-  --surface-strong: #ffffff;
-  --line: rgba(31, 36, 40, 0.13);
-  --accent: #0d7665;
-  --accent-2: #d76b2f;
-  --shadow: 0 20px 45px rgba(23, 27, 31, 0.13);
+  --bg-1: #ece6d8;
+  --bg-2: #d8cfbb;
+  --ink: #1f1a12;
+  --muted: #463d31;
+  --surface: rgba(242, 234, 220, 0.94);
+  --surface-strong: #efe4d3;
+  --line: rgba(60, 49, 35, 0.35);
+  --accent: #4f6430;
+  --accent-2: #8f5d38;
+  --shadow: 0 20px 40px rgba(45, 36, 24, 0.14);
 }
 
 * {
@@ -45,9 +45,9 @@ a {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at 8% 12%, rgba(13, 118, 101, 0.15), transparent 32%),
-    radial-gradient(circle at 92% 18%, rgba(215, 107, 47, 0.13), transparent 28%),
-    linear-gradient(rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.32));
+    radial-gradient(circle at 8% 12%, rgba(110, 127, 74, 0.16), transparent 34%),
+    radial-gradient(circle at 92% 18%, rgba(167, 119, 79, 0.14), transparent 30%),
+    linear-gradient(rgba(236, 229, 214, 0.32), rgba(236, 229, 214, 0.32));
   z-index: -1;
 }
 
@@ -125,7 +125,7 @@ a {
   right: -70px;
   top: -60px;
   border-radius: 50%;
-  background: conic-gradient(from 90deg, rgba(13, 118, 101, 0.15), rgba(215, 107, 47, 0.2), rgba(13, 118, 101, 0.15));
+  background: conic-gradient(from 90deg, rgba(110, 127, 74, 0.16), rgba(167, 119, 79, 0.2), rgba(110, 127, 74, 0.16));
 }
 
 .eyebrow {
@@ -194,7 +194,7 @@ a {
 
 .hero-actions a:first-child {
   color: #ffffff;
-  background: linear-gradient(110deg, var(--accent), #0a5f52);
+  background: linear-gradient(110deg, var(--accent), #536038);
   border-color: transparent;
 }
 
@@ -368,7 +368,7 @@ a {
   padding: 0.62rem 1.05rem;
   font: 700 0.88rem/1 'Manrope', 'Segoe UI', sans-serif;
   color: #ffffff;
-  background: linear-gradient(110deg, var(--accent), #0a5f52);
+  background: linear-gradient(110deg, var(--accent), #536038);
   cursor: pointer;
 }
 
@@ -467,11 +467,11 @@ a {
 
 @keyframes title-glow {
   0% {
-    text-shadow: 0 0 0 rgba(13, 118, 101, 0);
+    text-shadow: 0 0 0 rgba(110, 127, 74, 0);
   }
 
   100% {
-    text-shadow: 0 2px 18px rgba(13, 118, 101, 0.14);
+    text-shadow: 0 2px 18px rgba(110, 127, 74, 0.16);
   }
 }
 
