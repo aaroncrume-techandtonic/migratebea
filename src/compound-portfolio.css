@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
 :root {
   --bg-1: #f4f3ef;
   --bg-2: #e5e9eb;
@@ -133,8 +135,9 @@ a {
 .section h2,
 .role-card h3,
 .project-card h3 {
-  font-family: 'Fraunces', Georgia, serif;
-  line-height: 1.08;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
 .hero h1 {

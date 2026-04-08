@@ -17,67 +17,73 @@ if (!app) {
 
 const featuredPortfolio: LinkCard[] = [
   {
-    title: 'Indigenous Pages',
-    detail: 'A living reading room where ancestral knowledge is gathered with care, context, and reverence for the path of learning.',
+    title: 'Indigenous Learning Library',
+    detail: 'Start here if you want a guided reading space where Indigenous knowledge is organized with care, context, and clear learning pathways.',
     href: 'https://aaroncrume-techandtonic.github.io/indigenous-pages/',
-    label: 'Field Notes',
+    label: 'Begin Here',
   },
   {
-    title: 'Modoc War Archive',
-    detail: 'A public history archive that braids timeline, place, and memory into a story carried forward through source and witness.',
+    title: 'Modoc History Archive',
+    detail: 'Continue into a historical archive that connects timeline, place, and source material so you can explore the full story with clarity.',
     href: 'https://aaroncrume-techandtonic.github.io/Modoc-War/',
-    label: 'Archive Work',
+    label: 'Deepen Context',
   },
   {
-    title: 'Klamath Watershed',
-    detail: 'A watershed narrative where rivers, regions, and relationships are mapped as one connected body of place.',
+    title: 'Klamath Watershed Story Map',
+    detail: 'Move into an interactive regional map experience where rivers, landscapes, and relationships are presented as one connected system.',
     href: 'https://aaroncrume-techandtonic.github.io/klamath-watershed/',
-    label: 'Place Study',
+    label: 'Explore Place',
   },
   {
-    title: 'Omni Cosmos Horoscope',
-    detail: 'An interactive sky-path of symbols and interpretation, inviting each visitor into a personalized cosmic reading.',
+    title: 'Omni Cosmos Reading',
+    detail: 'Finish this path with an interactive cosmic reading experience where you can enter your details and receive a personalized interpretation.',
     href: 'https://omni-cosmos.vercel.app',
-    label: 'Studio Piece',
+    label: 'Interactive Experience',
   },
 ]
 
 const easyAccessLinks: LinkCard[] = [
   {
-    title: 'Main Storefront',
-    detail: 'The main doorway to current releases, learning tools, and digital offerings.',
+    title: 'Shop Digital Offerings',
+    detail: 'Go directly to the main storefront for current releases, digital tools, and learning-centered products.',
     href: 'https://techandtonic.store/',
-    label: 'Main Doorway',
+    label: 'Shop',
   },
   {
-    title: 'The Hidden Language of Trauma',
-    detail: 'Direct access to the free resource and companion material for reflection, study, and healing insight.',
+    title: 'Free Guide: Hidden Language of Trauma',
+    detail: 'Open the free guide and companion materials when you want a focused starting point for reflection, study, and insight.',
     href: 'https://techandtonic.store/shop/583c5bec-b36c-49f4-bc1d-e06eeaf6ce9f?pageViewSource=lib_view',
-    label: 'Open Resource',
+    label: 'Free Resource',
   },
   {
-    title: 'Compound Portfolio App',
-    detail: 'A unified portfolio narrative built from resume foundations, project highlights, and role history.',
+    title: 'Klamath Language Learning App',
+    detail: 'Practice Klamath and Modoc vocabulary with an interactive language tool designed for steady, everyday learning.',
+    href: 'https://aaroncrume-techandtonic.github.io/klamath-app/',
+    label: 'Language Learning',
+  },
+  {
+    title: 'About the Builder',
+    detail: 'Follow a concise profile of experience, project highlights, and leadership background to understand who is behind the work.',
     href: 'compound-portfolio.html',
-    label: 'Profile Atlas',
+    label: 'Background',
   },
   {
-    title: 'Oracle Neumero',
-    detail: 'Enter the numerology experience and follow its symbolic pathways toward meaning.',
+    title: 'Oracle Neumero Experience',
+    detail: 'Step into the numerology pathway if you want another symbolic tool for reflection and interpretation.',
     href: 'https://aaroncrume-techandtonic.github.io/OracleNeumero/',
-    label: 'Companion Work',
+    label: 'Companion Tool',
   },
   {
-    title: 'Beacons Legacy Links',
-    detail: 'A bridge for visitors still arriving through earlier pathways and familiar waypoints.',
+    title: 'Legacy Link Hub',
+    detail: 'Use this bridge if you arrived from older routes and want to navigate familiar links in one place.',
     href: 'https://beacons.ai/techandtonic',
-    label: 'Legacy Route',
+    label: 'Legacy Access',
   },
   {
-    title: 'Featured Product Page',
-    detail: 'A focused path to one highlighted offering when you want to begin with a single destination.',
+    title: 'Featured Product Spotlight',
+    detail: 'Go straight to one highlighted offer when you prefer a single focused destination instead of browsing first.',
     href: 'https://techandtonic.store/shop/4440aedc-a40d-45f1-824c-4ca4fe42a3b6',
-    label: 'Current Feature',
+    label: 'Spotlight',
   },
 ]
 
@@ -103,9 +109,9 @@ app.innerHTML = `
   <div class="site-shell">
     <header class="hero" id="top">
       <p class="eyebrow">Tech & Tonic</p>
-      <h1>You are entering a ceremonial digital home for story, craft, and community knowledge.</h1>
+      <h1>Start here, then follow a clear path through story, tools, and next steps.</h1>
       <p class="hero-copy">
-        You can follow a clear path through the work, offerings, and resources, then move directly into conversation.
+        Begin with featured experiences, move into guided resources, and finish with a direct way to connect when you are ready.
       </p>
       <div class="hero-actions">
         <a href="#portfolio">Enter the Works</a>
@@ -123,7 +129,7 @@ app.innerHTML = `
     <section class="section" id="portfolio">
       <div class="section-head">
         <p class="eyebrow">Featured Works</p>
-        <h2>You meet the heart of the work first, so you can orient quickly and choose your next step.</h2>
+        <h2>Start with the core experiences so you can quickly see what this space offers and where you want to go next.</h2>
       </div>
       <div class="card-grid card-grid-portfolio">
         ${renderCards(featuredPortfolio)}
@@ -133,7 +139,7 @@ app.innerHTML = `
     <section class="section" id="find">
       <div class="section-head">
         <p class="eyebrow">Guided Paths</p>
-        <h2>You can move through clear paths to offerings, free resources, and the technical roots behind the work.</h2>
+        <h2>After exploring the featured work, use these direct paths to shop, access free resources, or learn more about the builder.</h2>
       </div>
       <div class="card-grid">
         ${renderCards(easyAccessLinks)}
@@ -143,18 +149,17 @@ app.innerHTML = `
     <section class="section section-about" id="about">
       <div class="section-head">
         <p class="eyebrow">Story and Practice</p>
-        <h2>You are stepping into a shared space where cultural storytelling, education, and digital craft come together.</h2>
+        <h2>You are in a space where cultural storytelling, education, and digital craft are designed to work together.</h2>
       </div>
       <p>
-        This experience is structured to help you move from discovery to action with fewer dead ends, stronger context,
-        and clearer routes at every step.
+        Every section is arranged to guide you from discovery to action with clearer context, better transitions, and fewer dead ends.
       </p>
     </section>
 
     <section class="section section-contact" id="contact-section">
       <div class="section-head">
         <p class="eyebrow">Open a Conversation</p>
-        <h2>You can start a conversation here about collaboration, partnerships, or custom storytelling builds.</h2>
+        <h2>When you are ready, start a conversation about collaboration, partnerships, or custom storytelling builds.</h2>
       </div>
       <form id="contact-form" class="contact-form" novalidate>
         <label>
