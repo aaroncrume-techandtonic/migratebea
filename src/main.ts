@@ -103,10 +103,9 @@ app.innerHTML = `
   <div class="site-shell">
     <header class="hero" id="top">
       <p class="eyebrow">Tech & Tonic</p>
-      <h1>A ceremonial digital home for story, craft, and community knowledge.</h1>
+      <h1>You are entering a ceremonial digital home for story, craft, and community knowledge.</h1>
       <p class="hero-copy">
-        Each section follows a deliberate path: begin with the work, move through offerings and resources, and arrive
-        at a clear invitation to connect.
+        You can follow a clear path through the work, offerings, and resources, then move directly into conversation.
       </p>
       <div class="hero-actions">
         <a href="#portfolio">Enter the Works</a>
@@ -124,7 +123,7 @@ app.innerHTML = `
     <section class="section" id="portfolio">
       <div class="section-head">
         <p class="eyebrow">Featured Works</p>
-        <h2>The featured work appears first, so visitors meet the heart of the story before anything else.</h2>
+        <h2>You meet the heart of the work first, so you can orient quickly and choose your next step.</h2>
       </div>
       <div class="card-grid card-grid-portfolio">
         ${renderCards(featuredPortfolio)}
@@ -134,7 +133,7 @@ app.innerHTML = `
     <section class="section" id="find">
       <div class="section-head">
         <p class="eyebrow">Guided Paths</p>
-        <h2>Clear paths to offerings, free resources, and the technical roots beneath the work.</h2>
+        <h2>You can move through clear paths to offerings, free resources, and the technical roots behind the work.</h2>
       </div>
       <div class="card-grid">
         ${renderCards(easyAccessLinks)}
@@ -144,18 +143,18 @@ app.innerHTML = `
     <section class="section section-about" id="about">
       <div class="section-head">
         <p class="eyebrow">Story and Practice</p>
-        <h2>Tech and Tonic brings cultural storytelling, education, and digital craft into one shared space.</h2>
+        <h2>You are stepping into a shared space where cultural storytelling, education, and digital craft come together.</h2>
       </div>
       <p>
-        This redesign is built as a guided narrative: fewer dead ends, stronger context, and clearer routes so each
-        visitor can move from discovery to action with confidence, clarity, and purpose.
+        This experience is structured to help you move from discovery to action with fewer dead ends, stronger context,
+        and clearer routes at every step.
       </p>
     </section>
 
     <section class="section section-contact" id="contact-section">
       <div class="section-head">
         <p class="eyebrow">Open a Conversation</p>
-        <h2>Begin a conversation about collaboration, partnerships, or custom storytelling builds.</h2>
+        <h2>You can start a conversation here about collaboration, partnerships, or custom storytelling builds.</h2>
       </div>
       <form id="contact-form" class="contact-form" novalidate>
         <label>
