@@ -37,7 +37,7 @@ const featuredPortfolio: LinkCard[] = [
   {
     title: 'Omni Cosmos Reading',
     detail: 'Finish this path with an interactive cosmic reading experience where you can enter your details and receive a personalized interpretation.',
-    href: 'https://omni-cosmos.vercel.app',
+    href: 'https://omni-cosmos-v2-1.vercel.app',
     label: 'Interactive Experience',
   },
 ]
@@ -115,7 +115,7 @@ const appDirectoryLinks: Array<Pick<LinkCard, 'title' | 'href'>> = [
   },
   {
     title: 'Omni Cosmos Reading',
-    href: 'https://omni-cosmos.vercel.app',
+    href: 'https://omni-cosmos-v2-1.vercel.app',
   },
   {
     title: 'Klamath Language Learning App',

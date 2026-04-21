@@ -14,7 +14,7 @@ Landing page project for moving Tech and Tonic content off Beacons and onto a fi
 - `https://techandtonic.store/`
 - `https://techandtonic.store/shop/583c5bec-b36c-49f4-bc1d-e06eeaf6ce9f?pageViewSource=lib_view`
 - `https://beacons.ai/techandtonic`
-- `https://aaroncrume-techandtonic.github.io/Omni-Cosmos-Horoscope/`
+- `https://omni-cosmos-v2-1.vercel.app`
 - `https://aaroncrume-techandtonic.github.io/Modoc-War/`
 - `https://aaroncrume-techandtonic.github.io/indigenous-pages/`
 - `https://aaroncrume-techandtonic.github.io/klamath-watershed/`
