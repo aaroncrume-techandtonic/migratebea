@@ -100,6 +100,13 @@ const creatorsPortfolio: LinkCard = {
   label: 'Featured Profile',
 }
 
+const showcaseApp = {
+  title: 'Omni Cosmos V2.1',
+  detail:
+    'Explore the full Omni Cosmos experience directly from this page, then launch it in a dedicated tab when you want the complete immersive view.',
+  href: 'https://aaroncrume-techandtonic.github.io/OmniCosmosV2.1/',
+}
+
 const appDirectoryLinks: Array<Pick<LinkCard, 'title' | 'href'>> = [
   {
     title: 'Indigenous Learning Library',
@@ -186,6 +193,7 @@ app.innerHTML = `
 
     <nav class="jump-nav" aria-label="Section navigation">
       <a href="#portfolio">Works</a>
+      <a href="#showcase">Showcase</a>
       <a href="#find">Paths</a>
       <a href="#creator">Creator</a>
       <a href="#about">Practice</a>
@@ -209,6 +217,26 @@ app.innerHTML = `
       </div>
       <div class="card-grid card-grid-portfolio">
         ${renderCards(featuredPortfolio)}
+      </div>
+    </section>
+
+    <section class="section section-showcase" id="showcase">
+      <div class="section-head">
+        <p class="eyebrow">Showcase App</p>
+        <h2>Omni Cosmos V2.1 is now featured here as a live showcase experience.</h2>
+      </div>
+      <p class="showcase-copy">${showcaseApp.detail}</p>
+      <div class="showcase-frame-wrap">
+        <iframe
+          class="showcase-frame"
+          src="${showcaseApp.href}"
+          title="Omni Cosmos V2.1 Showcase"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+        ></iframe>
+      </div>
+      <div class="showcase-actions">
+        <a href="${showcaseApp.href}" target="_blank" rel="noreferrer">Launch Omni Cosmos V2.1</a>
       </div>
     </section>
 
