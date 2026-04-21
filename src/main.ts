@@ -35,9 +35,9 @@ const featuredPortfolio: LinkCard[] = [
     label: 'Explore Place',
   },
   {
-    title: 'Omni Cosmos Reading',
+    title: 'OmniCosmos V3.0',
     detail: 'Finish this path with an interactive cosmic reading experience where you can enter your details and receive a personalized interpretation.',
-    href: 'https://omni-cosmos-v2-1.vercel.app',
+    href: 'https://aaroncrume-techandtonic.github.io/OmniCosmosV2.1/',
     label: 'Interactive Experience',
   },
 ]
@@ -101,7 +101,7 @@ const creatorsPortfolio: LinkCard = {
 }
 
 const showcaseApp = {
-  title: 'Omni Cosmos V2.1',
+  title: 'OmniCosmos V3.0',
   detail:
     'Explore the full Omni Cosmos experience directly from this page, then launch it in a dedicated tab when you want the complete immersive view.',
   href: 'https://aaroncrume-techandtonic.github.io/OmniCosmosV2.1/',
@@ -121,8 +121,8 @@ const appDirectoryLinks: Array<Pick<LinkCard, 'title' | 'href'>> = [
     href: 'https://aaroncrume-techandtonic.github.io/klamath-watershed/',
   },
   {
-    title: 'Omni Cosmos Reading',
-    href: 'https://omni-cosmos-v2-1.vercel.app',
+    title: 'OmniCosmos V3.0',
+    href: 'https://aaroncrume-techandtonic.github.io/OmniCosmosV2.1/',
   },
   {
     title: 'Klamath Language Learning App',
@@ -179,6 +179,26 @@ app.innerHTML = `
       </nav>
     </section>
 
+    <section class="section section-showcase section-showcase-top" id="showcase">
+      <div class="section-head">
+        <p class="eyebrow">Showcase App</p>
+        <h2>${showcaseApp.title} is now featured at the top of techandtonic.tech.</h2>
+      </div>
+      <p class="showcase-copy">${showcaseApp.detail}</p>
+      <div class="showcase-frame-wrap">
+        <iframe
+          class="showcase-frame"
+          src="${showcaseApp.href}"
+          title="OmniCosmos V3.0 Showcase"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+        ></iframe>
+      </div>
+      <div class="showcase-actions">
+        <a href="${showcaseApp.href}" target="_blank" rel="noreferrer">Launch OmniCosmos V3.0</a>
+      </div>
+    </section>
+
     <header class="hero" id="top">
       <p class="eyebrow">Tech & Tonic</p>
       <h1>Start here, then follow a clear path through story, tools, and next steps.</h1>
@@ -217,26 +237,6 @@ app.innerHTML = `
       </div>
       <div class="card-grid card-grid-portfolio">
         ${renderCards(featuredPortfolio)}
-      </div>
-    </section>
-
-    <section class="section section-showcase" id="showcase">
-      <div class="section-head">
-        <p class="eyebrow">Showcase App</p>
-        <h2>Omni Cosmos V2.1 is now featured here as a live showcase experience.</h2>
-      </div>
-      <p class="showcase-copy">${showcaseApp.detail}</p>
-      <div class="showcase-frame-wrap">
-        <iframe
-          class="showcase-frame"
-          src="${showcaseApp.href}"
-          title="Omni Cosmos V2.1 Showcase"
-          loading="lazy"
-          referrerpolicy="no-referrer"
-        ></iframe>
-      </div>
-      <div class="showcase-actions">
-        <a href="${showcaseApp.href}" target="_blank" rel="noreferrer">Launch Omni Cosmos V2.1</a>
       </div>
     </section>
 
