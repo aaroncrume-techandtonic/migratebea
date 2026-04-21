@@ -10,7 +10,7 @@ type LinkCard = {
 const contactEmail = 'hello@techandtonic.tech'
 const omniCosmosV3Url = 'https://aaroncrume-techandtonic.github.io/OmniCosmosV2.1/'
 
-const app = document.querySelector<HTMLDivElement>('#app')
+const app = document.querySelector<HTMLDivElement>('#root')
 
 if (!app) {
   throw new Error('App root not found')
