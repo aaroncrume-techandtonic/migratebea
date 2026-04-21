@@ -8,7 +8,7 @@ type LinkCard = {
 }
 
 const contactEmail = 'hello@techandtonic.tech'
-const omniCosmosV3Url = 'https://aaroncrume-techandtonic.github.io/OmniCosmosV2.1/'
+const omniCosmosV3Url = 'https://aaroncrume-techandtonic.github.io/OmniCosmosV2.1/?v=3.0.4'
 
 const app = document.querySelector<HTMLDivElement>('#root')
 
