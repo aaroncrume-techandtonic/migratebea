@@ -35,6 +35,19 @@ npm run dev
 npm run build
 ```
 
+## Deployment (Vercel)
+
+This repository is configured for Vercel-first deployment.
+
+1. Import the repository in Vercel.
+2. Keep defaults or set:
+	- Build Command: `npm run build`
+	- Output Directory: `dist`
+3. Connect `techandtonic.tech` and `www.techandtonic.tech` in Vercel Domains.
+4. Push to `main` to trigger production deploys.
+
+`vercel.json` in the repo pins build/output settings so deploy behavior stays consistent.
+
 ## Updating the link hub
 
 Edit the `primaryLinks` array in `src/main.ts` to add or replace active links, and use `linksNeedingConfirmation` for any destinations that still need to be verified.
