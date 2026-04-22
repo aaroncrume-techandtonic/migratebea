@@ -10,10 +10,12 @@
     />
     <meta name="theme-color" content="#16342f" />
     <title>Tech and Tonic</title>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" crossorigin src="/assets/main-D_BRiwVK.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-wMinxHhO.js">
+    <link rel="stylesheet" crossorigin href="/assets/main-DfoQqb02.css">
   </head>
   <body>
-    <div id="root"><div id="loading-fallback">Loading...</div></div>
-
+    <div id="app"></div>
   </body>
 </html>
+
